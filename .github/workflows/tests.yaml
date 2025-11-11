@@ -1,11 +1,11 @@
-name: CI_Pipeline
+name: Run Tests
 
 on: 
-  push: 
+  push:
     branches: [ main ]
 
-jobs: 
-  build:
+jobs:
+  test:
     runs-on: ubuntu-latest
 
     steps:
@@ -20,5 +20,5 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - name: Run Index.js only
-        run: npm start
+      - name: RUN TESTS only
+        run: npm test
